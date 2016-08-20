@@ -160,8 +160,12 @@
 							dataType    : 'json', // what type of data do we expect back from the server
 							encode      : true,
 							success		: function(res){
+								console.log('Here');
 											var ret = $.parseJSON(JSON.stringify(res));
 											response.html(ret.message).fadeIn(500);
+							},
+							fail : function(res) {
+								console.log('Yes');
 							}
 						});
 				}           

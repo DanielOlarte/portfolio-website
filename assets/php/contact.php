@@ -15,11 +15,11 @@ if(isset($_POST['message'])) {
 
 	$status = mail($to, $subject, $message, $headers);
 
-	if($status == TRUE){	
+	if ($status == TRUE) {	
 		$res['sendstatus'] = 'done';
 		$res['message'] = "Email sent. I'll answer you as soon as possible. Thanks for contact me.";
     }
-	else{
+	else {
 		$res['message'] = 'Failed to send mail. Please mail me to oscar.rpr@gmail.com';
 	}
 	
